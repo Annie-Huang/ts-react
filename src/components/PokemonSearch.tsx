@@ -30,6 +30,16 @@ class PokemonSearch extends Component<User, SearchState> {
                     this.setState({error: true});
                     return;
                 }
+
+                res.json().then(data => {
+                    this.setState({
+                        error: false,
+                        name: data.name,
+                        numberOfAbilites: data.abilities.length,
+                        baseExperience: data.base_experience,
+                        imageUrl: data.sprites.front_default
+                    });
+                });
             });
     };
 
