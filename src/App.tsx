@@ -5,7 +5,7 @@ import './App.css';
 const App: React.FC = () => {
   return (
     <div className="App">
-      <PokemonSearch />
+      <PokemonSearch name="John Doe" numberOfPokemons={5} />
     </div>
   );
 }
