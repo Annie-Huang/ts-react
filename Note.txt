@@ -1,6 +1,92 @@
 https://www.youtube.com/watch?v=0_C2X1yRRac
+https://github.com/hidjou/classsed-react-typescript-tutorial
+
+#######################################################################
 
 D:\react>create-react-app ts-react --typescript
+Creating a new React app in D:\react\ts-react.
+
+Installing packages. This might take a couple of minutes.
+Installing react, react-dom, and react-scripts...
+
+yarn add v1.6.0
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+info There appears to be trouble with your network connection. Retrying...
+info There appears to be trouble with your network connection. Retrying...
+info There appears to be trouble with your network connection. Retrying...
+info fsevents@1.2.9: The platform "win32" is incompatible with this module.
+info "fsevents@1.2.9" is an optional dependency and failed compatibility check. Excluding it from installation.
+info fsevents@2.0.6: The platform "win32" is incompatible with this module.
+info "fsevents@2.0.6" is an optional dependency and failed compatibility check. Excluding it from installation.
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+warning Your current version of Yarn is out of date. The latest version is "1.16.0", while you're on "1.6.0".
+info To upgrade, run the following command:
+$ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+success Saved 19 new dependencies.
+info Direct dependencies
++- @types/jest@24.0.13
++- @types/node@12.0.2
++- @types/react-dom@16.8.4
++- @types/react@16.8.17
++- react-dom@16.8.6
++- react-scripts@3.0.1
++- react@16.8.6
++- typescript@3.4.5
+info All dependencies
++- @types/jest-diff@20.0.1
++- @types/jest@24.0.13
++- @types/node@12.0.2
++- @types/prop-types@15.7.1
++- @types/react-dom@16.8.4
++- @types/react@16.8.17
++- babel-preset-react-app@9.0.0
++- csstype@2.6.4
++- eslint-config-react-app@4.0.1
++- fork-ts-checker-webpack-plugin@1.1.1
++- microevent.ts@0.1.0
++- react-app-polyfill@1.0.1
++- react-dev-utils@9.0.1
++- react-dom@16.8.6
++- react-error-overlay@5.1.6
++- react-scripts@3.0.1
++- react@16.8.6
++- typescript@3.4.5
++- worker-rpc@0.1.0
+Done in 132.67s.
+We detected TypeScript in your project (src\App.test.tsx) and created a tsconfig.json file for you.
+
+Your tsconfig.json has been populated with default values.
+
+
+Initialized a git repository.
+
+Success! Created ts-react at D:\react\ts-react
+Inside that directory, you can run several commands:
+
+  yarn start
+    Starts the development server.
+
+  yarn build
+    Bundles the app into static files for production.
+
+  yarn test
+    Starts the test runner.
+
+  yarn eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd ts-react
+  yarn start
+
+Happy hacking!
+
+=======================
 D:\react\ts-react>git remote add origin git@github.com:Annie-Huang/ts-react.git
 D:\react\ts-react>git push -u origin master
 
