@@ -1,0 +1,26 @@
+https://www.youtube.com/watch?v=0_C2X1yRRac
+
+D:\react>create-react-app ts-react --typescript
+D:\react\ts-react>git remote add origin git@github.com:Annie-Huang/ts-react.git
+D:\react\ts-react>git push -u origin master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
