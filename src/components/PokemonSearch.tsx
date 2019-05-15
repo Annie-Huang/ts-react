@@ -6,7 +6,7 @@ class PokemonSearch extends Component<User> {
         const {name, numberOfPokemons} = this.props;
         return (
             <div>
-                <p>User {name} has {numberOfPokemons} pokemons </p>
+                <p>User {name} {numberOfPokemons && <span>has {numberOfPokemons} pokemons</span>} </p>
             </div>
         );
     }
