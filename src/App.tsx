@@ -8,6 +8,6 @@ const App: React.FC = () => {
       <PokemonSearch name="John Doe" numberOfPokemons={5}/>
     </div>
   );
-}
+};
 
 export default App;
