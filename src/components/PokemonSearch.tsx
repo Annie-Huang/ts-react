@@ -22,6 +22,7 @@ class PokemonSearch extends Component<User, SearchState> {
         };
         this.pokemonRef = React.createRef();
     }
+
     onSearchClick = () => {
         const inputValue = this.pokemonRef.current.value;
         fetch( `https://pokeapi.co/api/v2/pokemon/${inputValue}`)
@@ -46,6 +47,19 @@ class PokemonSearch extends Component<User, SearchState> {
     render() {
         const {name: userName, numberOfPokemons} = this.props;
         const { error, name, numberOfAbilites, baseExperience, imageUrl } = this.state;
+
+        let resultMarkup;
+
+        if(error) {
+            resultMarkup = <p>Pokemon not found, please try again</p>
+        } else {
+            resultMarkup = <div>
+                <img src={imageUrl} alt="pokemon" className="pokemon-image" />
+                <p>
+                    {name} has {numberOfAbilites} abilities and {baseExperience} base experience points
+                </p>
+            </div>
+        }
         return (
             <div>
                 <p>User {userName} {numberOfPokemons && <span>has {numberOfPokemons} pokemons</span>} </p>
@@ -53,6 +67,7 @@ class PokemonSearch extends Component<User, SearchState> {
                 <button onClick={this.onSearchClick} className="my-button">
                     Search
                 </button>
+                {resultMarkup}
             </div>
         );
     }
