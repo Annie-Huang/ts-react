@@ -3,6 +3,10 @@ import User from '../interfaces/User.interface';
 
 interface SearchState {
     error: boolean,
+    pokemon: Pokemon
+}
+
+interface Pokemon {
     name: string,
     numberOfAbilites: number,
     baseExperience: number,
@@ -15,10 +19,7 @@ class PokemonSearch extends Component<User, SearchState> {
         super(props);
         this.state = {
             error: false,
-            name: '',
-            numberOfAbilites: 0,
-            baseExperience: 0,
-            imageUrl: ''
+            pokemon: null
         };
         this.pokemonRef = React.createRef();
     }
@@ -35,10 +36,12 @@ class PokemonSearch extends Component<User, SearchState> {
                 res.json().then(data => {
                     this.setState({
                         error: false,
-                        name: data.name,
-                        numberOfAbilites: data.abilities.length,
-                        baseExperience: data.base_experience,
-                        imageUrl: data.sprites.front_default
+                        pokemon: {
+                            name: data.name,
+                            numberOfAbilites: data.abilities.length,
+                            baseExperience: data.base_experience,
+                            imageUrl: data.sprites.front_default
+                        }
                     });
                 });
             });
@@ -46,17 +49,17 @@ class PokemonSearch extends Component<User, SearchState> {
 
     render() {
         const {name: userName, numberOfPokemons} = this.props;
-        const { error, name, numberOfAbilites, baseExperience, imageUrl } = this.state;
+        const {error, pokemon} = this.state;
 
         let resultMarkup;
 
         if(error) {
             resultMarkup = <p>Pokemon not found, please try again</p>
-        } else {
+        } else if(this.state.pokemon) {
             resultMarkup = <div>
-                <img src={imageUrl} alt="pokemon" className="pokemon-image" />
+                <img src={pokemon.imageUrl} alt="pokemon" className="pokemon-image" />
                 <p>
-                    {name} has {numberOfAbilites} abilities and {baseExperience} base experience points
+                    {pokemon.name} has {pokemon.numberOfAbilites} abilities and {pokemon.baseExperience} base experience points
                 </p>
             </div>
         }
