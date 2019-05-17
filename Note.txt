@@ -92,8 +92,7 @@ Happy hacking!
 D:\react\ts-react>git remote add origin git@github.com:Annie-Huang/ts-react.git
 D:\react\ts-react>git push -u origin master
 
-
-
+Can search pikachu, snorlax now.
 
 
 
