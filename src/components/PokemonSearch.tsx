@@ -47,6 +47,10 @@ class PokemonSearch extends Component<User, SearchState> {
             });
     };
 
+    addNumbers = (a:number, b:number):number => {
+        return a + b;
+    };
+    
     render() {
         const {name: userName, numberOfPokemons} = this.props;
         const {error, pokemon} = this.state;
